@@ -168,13 +168,13 @@ Return ONLY this JSON (no markdown, no explanation):
 Only include fields where you have vessel data to fill. Skip fields with no data.
 Use font_size 8-10 for most fields. Never exceed the field boundary.`;
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  const response = await fetch('/api/claude-proxy', {
     method: 'POST',
     headers: {
       'Content-Type':      'application/json',
-      'x-api-key':         CLAUDE_API_KEY,
-      'anthropic-version': '2023-06-01',
-      'anthropic-beta':    'pdfs-2024-09-25',
+      
+      
+      
     },
     body: JSON.stringify({
       model:      'claude-sonnet-4-6',
