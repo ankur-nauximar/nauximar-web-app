@@ -76,7 +76,7 @@ export async function processForm(
 
     // ── 3. Fill the PDF ────────────────────────────────────────────────────
     onProgress('filling', `Filling ${analysis.fieldsToFill.length} fields...`);
-    const pdfBytes = Buffer.from ? Buffer.from(pdfBase64, 'base64') : base64ToUint8Array(pdfBase64);
+    const pdfBytes = base64ToUint8Array(pdfBase64);
     const { filledBytes, count, method } = await fillPdf(pdfBytes, analysis, vessel);
 
     // ── 4. Done ────────────────────────────────────────────────────────────
