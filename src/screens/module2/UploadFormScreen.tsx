@@ -445,7 +445,7 @@ export default function UploadFormScreen({ onBack, onSuccess }: UploadFormScreen
                   <motion.div
                     whileHover={{ borderColor: '#FFD700' }}
                     className="border-2 border-dashed border-gold-400 rounded-lg p-8 text-center hover:bg-navy-700/50 transition-colors cursor-pointer"
-                    onClick={() => fileInputRef.current?.click()}
+                    
                   >
                     <input
                       ref={fileInputRef}
